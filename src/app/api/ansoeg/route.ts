@@ -7,11 +7,13 @@ const requiredFields: (keyof ApplicationData)[] = [
   "age",
   "email",
   "phone",
-  "school",
-  "availableDays",
   "whyKvickly",
   "strengths",
-  "experience",
+  "weaknesses",
+  "workExperience",
+  "dailyLife",
+  "availableDays",
+  "extraInfo",
 ];
 
 export async function POST(request: Request) {
@@ -28,16 +30,27 @@ export async function POST(request: Request) {
       }
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(body.email!.trim())) {
+      return NextResponse.json(
+        { message: "Ugyldig emailadresse." },
+        { status: 400 }
+      );
+    }
+
     const cleanedData: ApplicationData = {
       fullName: body.fullName!.trim(),
       age: body.age!.trim(),
       email: body.email!.trim(),
       phone: body.phone!.trim(),
-      school: body.school!.trim(),
-      availableDays: body.availableDays!.trim(),
       whyKvickly: body.whyKvickly!.trim(),
       strengths: body.strengths!.trim(),
-      experience: body.experience!.trim(),
+      weaknesses: body.weaknesses!.trim(),
+      workExperience: body.workExperience!.trim(),
+      dailyLife: body.dailyLife!.trim(),
+      availableDays: body.availableDays!.trim(),
+      extraInfo: body.extraInfo!.trim(),
     };
 
     await sendApplicationEmail(cleanedData);

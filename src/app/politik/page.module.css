@@ -1,0 +1,249 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(216, 31, 38, 0.05), transparent 28%),
+    linear-gradient(180deg, #f8f6f4 0%, #f3efeb 100%);
+  color: #18181b;
+}
+
+.hero {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background-image:
+    linear-gradient(180deg, rgba(15, 15, 15, 0.18) 0%, rgba(15, 15, 15, 0.5) 100%),
+    url("/images/privacy-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroOverlay {
+  display: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0 120px;
+  color: white;
+}
+
+.kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroInner h1 {
+  margin: 0;
+  max-width: 700px;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 18px 0 0;
+  max-width: 680px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.wrapper {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 0 0 72px;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebar {
+  padding-top: 28px;
+}
+
+.sideCard {
+  position: sticky;
+  top: 24px;
+  border: 1px solid rgba(24, 24, 27, 0.06);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 50px rgba(24, 24, 27, 0.08);
+  padding: 20px;
+}
+
+.sideLabel {
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sideNav a {
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #27272a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sideNav a:hover {
+  background: #f4f4f5;
+  transform: translateX(2px);
+}
+
+.card {
+  margin-top: -88px;
+  border: 1px solid rgba(24, 24, 27, 0.06);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(24, 24, 27, 0.1);
+  padding: 32px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ece7e3;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #fff1f2;
+  color: #be123c;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.updated {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #71717a;
+}
+
+.section {
+  padding: 22px 0;
+  border-bottom: 1px solid #f0ece8;
+  scroll-margin-top: 110px;
+}
+
+.section:last-child {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+.section p {
+  margin: 0 0 14px;
+  line-height: 1.8;
+  color: #3f3f46;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+  color: #3f3f46;
+}
+
+.infoBox {
+  margin-top: 14px;
+  padding: 18px;
+  border-radius: 18px;
+  background: #faf7f5;
+  border: 1px solid #eee7e2;
+}
+
+.infoBox p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .card {
+    margin-top: -64px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 340px;
+  }
+
+  .heroInner {
+    width: min(100% - 24px, 1120px);
+    padding: 52px 0 92px;
+  }
+
+  .wrapper {
+    width: min(100% - 24px, 1120px);
+    padding-bottom: 48px;
+  }
+
+  .card {
+    margin-top: -48px;
+    border-radius: 22px;
+    padding: 22px;
+  }
+
+  .metaRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

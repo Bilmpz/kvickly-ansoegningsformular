@@ -49,10 +49,6 @@ Navn: ${data.fullName}
 Alder: ${data.age}
 Email: ${data.email}
 Telefon: ${data.phone}
-Skole: ${data.school}
-
-Tilgængelighed:
-${data.availableDays}
 
 Hvorfor Kvickly:
 ${data.whyKvickly}
@@ -60,8 +56,20 @@ ${data.whyKvickly}
 Styrker:
 ${data.strengths}
 
-Erfaring:
-${data.experience}
+Svagheder:
+${data.weaknesses}
+
+Tidligere erfaring med arbejde:
+${data.workExperience}
+
+Til daglig:
+${data.dailyLife}
+
+Tilgængelighed:
+${data.availableDays}
+
+Ekstra info:
+${data.extraInfo}
 `;
 
   const html = `
@@ -86,32 +94,37 @@ ${data.experience}
             <td style="padding: 8px; font-weight: bold;">Telefon</td>
             <td style="padding: 8px;">${escapeHtml(data.phone)}</td>
           </tr>
-          <tr>
-            <td style="padding: 8px; font-weight: bold;">Skole</td>
-            <td style="padding: 8px;">${escapeHtml(data.school)}</td>
-          </tr>
         </tbody>
       </table>
-
-      <h3>Tilgængelighed</h3>
-      <p>${escapeHtml(data.availableDays).replaceAll("\n", "<br />")}</p>
 
       <h3>Hvorfor Kvickly?</h3>
       <p>${escapeHtml(data.whyKvickly).replaceAll("\n", "<br />")}</p>
 
-      <h3>Styrker</h3>
+      <h3>Hvad er du god til?</h3>
       <p>${escapeHtml(data.strengths).replaceAll("\n", "<br />")}</p>
 
-      <h3>Erfaring</h3>
-      <p>${escapeHtml(data.experience).replaceAll("\n", "<br />")}</p>
+      <h3>Hvad er du dårlig til?</h3>
+      <p>${escapeHtml(data.weaknesses).replaceAll("\n", "<br />")}</p>
+
+      <h3>Tidligere erfaring med arbejde</h3>
+      <p>${escapeHtml(data.workExperience).replaceAll("\n", "<br />")}</p>
+
+      <h3>Hvad laver du til daglig?</h3>
+      <p>${escapeHtml(data.dailyLife).replaceAll("\n", "<br />")}</p>
+
+      <h3>Hvilke dage og tidspunkter kan du arbejde?</h3>
+      <p>${escapeHtml(data.availableDays).replaceAll("\n", "<br />")}</p>
+
+      <h3>Noget du selv ville tilføre?</h3>
+      <p>${escapeHtml(data.extraInfo).replaceAll("\n", "<br />")}</p>
     </div>
   `;
 
-    await transporter.sendMail({
+  await transporter.sendMail({
     from: `"Kvickly ansøgning" <${SMTP_FROM}>`,
     to: APPLICATION_RECEIVER,
     subject: `Ny ungarbejder-ansøgning - ${data.fullName}`,
     text,
     html,
-    });
+  });
 }

@@ -3,9 +3,11 @@ export type ApplicationData = {
   age: string;
   email: string;
   phone: string;
-  school: string;
-  availableDays: string;
   whyKvickly: string;
   strengths: string;
-  experience: string;
+  weaknesses: string;
+  workExperience: string;
+  dailyLife: string;
+  availableDays: string;
+  extraInfo: string;
 };

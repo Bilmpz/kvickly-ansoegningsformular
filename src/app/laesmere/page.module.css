@@ -37,7 +37,7 @@
 }
 
 .hero {
-  min-height: 68vh;
+  min-height: 56vh;
   background-image: url("https://www.tv2kosmopol.dk/img/asset/aW1hZ2VzLzIwMjAvMDkvMjEvMjAxNTExMDUtMTUyNzQyLTItMzNtYi0xLmpwZw/20151105-152742-2-33mb-1.jpg?fm=webp&crop=4207,2366,0,156&w=1536&s=fbc2152caaf213d3689dcd48e40af4ab");
   background-size: cover;
   background-position: center;
@@ -89,7 +89,6 @@
   line-height: 1.7;
 }
 
-/* Intro-boksen under hero */
 .introSection {
   margin-top: -40px;
   position: relative;
@@ -107,15 +106,6 @@
   text-align: center;
 }
 
-/* Resten af sektionerne */
-.leadersSection,
-.departmentsSection,
-.valuesSection {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 72px 24px 0;
-}
-
 .introLabel,
 .sectionKicker {
   margin: 0 0 10px;
@@ -126,25 +116,12 @@
   color: #a58d7d;
 }
 
-.sectionHeader {
-  max-width: 760px;
-  margin-bottom: 28px;
-}
-
-.sectionTitle {
+.introTitle {
   margin: 0 0 14px;
   font-size: clamp(30px, 4vw, 56px);
   line-height: 1.1;
   color: #9f8b80;
   font-weight: 800;
-}
-
-.sectionText,
-.introText {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #4b5563;
 }
 
 .introText {
@@ -153,6 +130,34 @@
   font-size: 20px;
   line-height: 1.7;
   color: #1f2937;
+}
+
+.leadersSection,
+.departmentsSection,
+.valuesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 0;
+}
+
+.sectionHeader {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.1;
+  color: #2a211b;
+  font-weight: 800;
+}
+
+.sectionText {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4b5563;
 }
 
 .leadersGrid {
@@ -391,5 +396,9 @@
 
   .sectionTitle {
     font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .introTitle {
+    font-size: clamp(30px, 8vw, 42px);
   }
 }

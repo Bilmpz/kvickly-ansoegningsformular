@@ -29,7 +29,7 @@ export default function HomePage() {
       <section className={styles.introSection}>
         <div className={styles.introInner}>
           <div className={styles.introLabel}>Job og muligheder</div>
-          <h2 className={styles.sectionTitle}>Et arbejde i Kvickly</h2>
+          <h2 className={styles.introTitle}>Et arbejde i Kvickly</h2>
           <p className={styles.introText}>
             Måske er det dit første job, eller måske har du allerede erfaring.
             Uanset hvad lægger vi i Kvickly stor vægt på den rette indstilling.
@@ -93,7 +93,7 @@ export default function HomePage() {
               <p className={styles.personRole}>Leder af Nonfood</p>
               <p>
                 Har ansvar for nonfood-afdelingen og arbejder med
-                vareopfyldning, overblik og en flot præsentation af vores mange vare.
+                vareopfyldning, overblik og en flot præsentation af varerne.
               </p>
             </div>
           </article>
@@ -108,7 +108,7 @@ export default function HomePage() {
               <h3>Kim Demskov</h3>
               <p className={styles.personRole}>Leder af Tørvare / Food</p>
               <p>
-                Har ansvar for tørvare & food-området og sikrer, at afdelingen altid
+                Har ansvar for food-området og sikrer, at afdelingen altid
                 fremstår indbydende, velopfyldt og klar til kunderne.
               </p>
             </div>
@@ -140,8 +140,8 @@ export default function HomePage() {
               <h3>Maja Dadaucic</h3>
               <p className={styles.personRole}>Leder af Kasselinjen</p>
               <p>
-                Har ansvar for kasselinjen og arbejder med service som topprioritet, 
-                folk får en god kundeoplevelse.
+                Har ansvar for kasselinjen og arbejder med service, struktur og
+                gode kundeoplevelser ved butikkens kasseområde.
               </p>
             </div>
           </article>
@@ -163,7 +163,7 @@ export default function HomePage() {
               <h3>Nonfood</h3>
               <p>
                 I nonfood arbejder man med varer uden for fødevarer, fx
-                cykler, legetøj, husholdning, sæsonvarer og meget mere.
+                husholdning, sæsonvarer og praktiske produkter til hjemmet.
               </p>
             </div>
             <ul>
@@ -184,7 +184,7 @@ export default function HomePage() {
             </div>
             <ul>
               <li>Vareopfyldning</li>
-              <li>trimme og orden på hylderne</li>
+              <li>Frontning og orden på hylderne</li>
               <li>Hjælpe kunder i afdelingen</li>
             </ul>
           </article>
@@ -233,7 +233,7 @@ export default function HomePage() {
             <ul>
               <li>Fylde brød og kager op</li>
               <li>Holde montre og hylder indbydende</li>
-              <li>Hjælpe kunder med et helt rigtige valg af brød</li>
+              <li>Hjælpe kunder i afdelingen</li>
             </ul>
           </article>
         </div>

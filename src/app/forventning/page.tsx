@@ -7,7 +7,7 @@ export default function ForventningPage() {
       <div className={styles.topBar}>
         <div className={styles.topBarInner}>
           <Link href="/" className={styles.backLink}>
-            ← Tilbage
+            ← Tilbage til forsiden
           </Link>
         </div>
       </div>

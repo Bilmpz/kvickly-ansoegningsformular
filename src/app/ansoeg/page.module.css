@@ -1,17 +1,22 @@
 .wrapper {
   min-height: 100vh;
   background: #f6f4f1;
+  position: relative;
 }
 
 .topBar {
-  background: #ffffff;
-  border-bottom: 1px solid #e7e2db;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .topBarInner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 26.8px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,17 +25,18 @@
 
 .backLink {
   font-weight: 600;
-  color: #1f2937;
+  color: white;
 }
 
 .topBarText {
   margin: 0;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 14px;
 }
 
 .hero {
   min-height: 260px;
+  padding-top: 72px;
   background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
@@ -38,12 +44,7 @@
 
 .heroOverlay {
   min-height: 260px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.58) 0%,
-    rgba(0, 0, 0, 0.3) 45%,
-    rgba(0, 0, 0, 0.15) 100%
-  );
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
 }
@@ -193,7 +194,10 @@
   padding: 18px;
   background: #fcfbfa;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
   color: #111827;
 }
 
@@ -278,6 +282,68 @@
   transform: none;
 }
 
+.successCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.successTitle {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+  color: #1f2937;
+}
+
+.successText {
+  max-width: 700px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.successActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.secondaryLinkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  color: #111827;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.secondaryLinkButton:hover {
+  background: #e5e7eb;
+}
+
+.privacyRow {
+  margin-top: 14px;
+}
+
+.privacyLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacyLink:hover {
+  color: #1f2937;
+}
+
 @media (max-width: 920px) {
   .formGrid {
     grid-template-columns: 1fr;
@@ -307,12 +373,14 @@
     padding: 22px 18px;
   }
 
-  .actions {
+  .actions,
+  .successActions {
     flex-direction: column;
   }
 
   .primaryButton,
-  .secondaryButton {
+  .secondaryButton,
+  .secondaryLinkButton {
     width: 100%;
   }
 }
