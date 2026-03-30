@@ -40,7 +40,7 @@ export default function HomePage() {
             <Link href="/ansoeg" className={styles.primaryButton}>
               Start ansøgning
             </Link>
-            <a href="#forventninger" className={styles.secondaryButtonLight}>
+            <a href="/forventning" className={styles.secondaryButtonLight}>
               Se forventninger
             </a>
           </div>
