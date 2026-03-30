@@ -1,83 +1,108 @@
-import Link from "next/link";
-import styles from "./page.module.css";
+<section className={styles.leadersSection}>
+  <div className={styles.sectionHeader}>
+    <p className={styles.sectionKicker}>Mød ledelsen</p>
+    <h2 className={styles.sectionTitle}>Varehusets ledere og chefer</h2>
+    <p className={styles.sectionText}>
+      Her kan du se ledelsen i Kvickly Prøvestenscentret og få et indblik i,
+      hvem der har ansvar for de forskellige områder i varehuset.
+    </p>
+  </div>
 
-export default function HomePage() {
-  return (
-    <main className={styles.wrapper}>
-      <section className={styles.hero}>
-        <div className={styles.heroOverlay}>
-          <div className={styles.heroContent}>
-            <p className={styles.kicker}>Kvickly</p>
-            <h1 className={styles.heroTitle}>Bliv ungarbejder hos os</h1>
-            <p className={styles.heroText}>
-              Hos Kvickly leder vi efter unge medarbejdere, der har lyst til at
-              tage ansvar, hjælpe kunderne og blive en del af et stærkt hold i
-              butikken.
-            </p>
-            <div className={styles.heroActions}>
-              <Link href="/ansoeg" className={styles.primaryButton}>
-                Søg jobbet
-              </Link>
-              <a href="/laesmere" className={styles.secondaryButton}>
-                Læs mere
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className={styles.leadersGrid}>
+    <article className={styles.personCard}>
+      <img
+        src="/unkown.png"
+        alt="Kevin Handberg"
+        className={styles.personImage}
+      />
+      <div className={styles.personContent}>
+        <h3>Kevin Handberg</h3>
+        <p className={styles.personRole}>Varehuschef</p>
+        <p>
+          Har det overordnede ansvar for varehuset og sikrer, at butikken
+          fungerer godt i hverdagen for både kunder og medarbejdere.
+        </p>
+      </div>
+    </article>
 
-      <section id="info" className={styles.introSection}>
-        <div className={styles.introBox}>
-          <h2 className={styles.introTitle}>Find din plads hos Kvickly</h2>
-          <p className={styles.introText}>
-            Vi søger unge, der har lyst til at lære, tage ansvar og være en del
-            af hverdagen i butikken. Du kommer til at arbejde med service,
-            samarbejde og opgaver, der gør en forskel for både kunder og
-            kollegaer.
-          </p>
+    <article className={styles.personCard}>
+      <img
+        src="/unkown.png"
+        alt="Carina Evers"
+        className={styles.personImage}
+      />
+      <div className={styles.personContent}>
+        <h3>Carina Evers</h3>
+        <p className={styles.personRole}>Souschef</p>
+        <p>
+          Er med til at sikre den daglige drift og støtter op om både ledelse,
+          medarbejdere og butikkens daglige opgaver.
+        </p>
+      </div>
+    </article>
 
-          <div className={styles.introButtons}>
-            <Link href="/ansoeg" className={styles.primaryButton}>
-              Start ansøgning
-            </Link>
-            <a href="#forventninger" className={styles.secondaryButtonLight}>
-              Se forventninger
-            </a>
-          </div>
-        </div>
-      </section>
+    <article className={styles.personCard}>
+      <img
+        src="/unkown.png"
+        alt="Betina Falk"
+        className={styles.personImage}
+      />
+      <div className={styles.personContent}>
+        <h3>Betina Falk</h3>
+        <p className={styles.personRole}>Nonfoodchef</p>
+        <p>
+          Har ansvar for nonfood-afdelingen og arbejder med vareopfyldning,
+          overblik og en flot præsentation af varerne.
+        </p>
+      </div>
+    </article>
 
-      <section className={styles.cardsSection}>
-        <div className={styles.cardsGrid}>
-          <article className={styles.card}>
-            <h3>Om jobbet</h3>
-            <p>
-              Som ungarbejder i Kvickly bliver du en del af butikkens hverdag og
-              hjælper med alt fra kundeservice til opfyldning og orden.
-            </p>
-          </article>
+    <article className={styles.personCard}>
+      <img
+        src="/unkown.png"
+        alt="Kim Demskov"
+        className={styles.personImage}
+      />
+      <div className={styles.personContent}>
+        <h3>Kim Demskov</h3>
+        <p className={styles.personRole}>Foodchef</p>
+        <p>
+          Har ansvar for food-området og sikrer, at afdelingen altid fremstår
+          indbydende, velopfyldt og klar til kunderne.
+        </p>
+      </div>
+    </article>
 
-          <article className={styles.card} id="forventninger">
-            <h3>Vi forventer</h3>
-            <ul>
-              <li>At du møder til tiden</li>
-              <li>At du er venlig og serviceminded</li>
-              <li>At du tager ansvar for dine opgaver</li>
-              <li>At du har lyst til at lære nyt</li>
-            </ul>
-          </article>
+    <article className={styles.personCard}>
+      <img
+        src="/unkown.png"
+        alt="Frederik Frisner"
+        className={styles.personImage}
+      />
+      <div className={styles.personContent}>
+        <h3>Frederik Frisner</h3>
+        <p className={styles.personRole}>Frugt &amp; grøntchef</p>
+        <p>
+          Har fokus på friske varer, kvalitet i afdelingen og en præsentation,
+          der gør området overskueligt og indbydende.
+        </p>
+      </div>
+    </article>
 
-          <article className={styles.card}>
-            <h3>Arbejdsopgaver</h3>
-            <ul>
-              <li>Opfyldning af varer</li>
-              <li>Hjælp til kunder i butikken</li>
-              <li>Oprydning og lettere rengøring</li>
-              <li>Andre praktiske opgaver i hverdagen</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </main>
-  );
-}
+    <article className={styles.personCard}>
+      <img
+        src="/unkown.png"
+        alt="Maja Dadaucic"
+        className={styles.personImage}
+      />
+      <div className={styles.personContent}>
+        <h3>Maja Dadaucic</h3>
+        <p className={styles.personRole}>Kasselinjechef</p>
+        <p>
+          Har ansvar for kasselinjen og arbejder med service, struktur og gode
+          kundeoplevelser ved butikkens kasseområde.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
