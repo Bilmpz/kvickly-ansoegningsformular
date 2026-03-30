@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const sections = [
@@ -18,7 +19,11 @@ export default function PrivatlivspolitikPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
-          <span className={styles.kicker}>KVICKLY PROVSTECENTERET</span>
+            <span className={styles.kicker}>
+            <Link href="/" className={styles.backLink}>
+                ← Tilbage til forsiden
+            </Link>
+            </span>
           <h1>Privatlivspolitik</h1>
           <p className={styles.subtitle}>
             Vi passer på dine oplysninger. Her kan du læse, hvordan vi behandler
@@ -70,14 +75,14 @@ export default function PrivatlivspolitikPage() {
             </p>
             <ul>
               <li>Navn</li>
-              <li>Telefonnummer</li>
+              <li>Alder</li>
               <li>E-mailadresse</li>
-              <li>Adresse eller by</li>
-              <li>Alder eller fødselsdato, hvis du selv oplyser det</li>
-              <li>Oplysninger om erfaring, uddannelse og tidligere job</li>
-              <li>Tilgængelighed og ønskede arbejdstider</li>
-              <li>Motivation og andre oplysninger, du skriver i formularen</li>
-              <li>Eventuelle vedhæftede filer, fx CV eller ansøgning</li>
+              <li>Telefonnummer</li>
+              <li>Motivation og andre oplysninger om din lyst til at arbejde</li>
+              <li>Oplysninger om dine personligetræk, som du oplyser os "Hvad du god til" & "Hvad du dårlig til" </li>
+              <li>Tidlidere arbejdserfaring</li>
+              <li>Tilgængelighed, fritidsaktiviteter og ønskede arbejdstider</li>
+              <li>Eventuelle information, som du deler i "Noget du selv ville tilføre" </li>
             </ul>
           </section>
 
@@ -85,10 +90,10 @@ export default function PrivatlivspolitikPage() {
             <h2>3. Formålet med behandlingen</h2>
             <p>Vi behandler dine oplysninger for at kunne:</p>
             <ul>
-              <li>modtage og vurdere din ansøgning,</li>
-              <li>kontakte dig om rekrutteringsforløbet,</li>
-              <li>afholde samtaler og vurdere din relevans til stillingen,</li>
-              <li>dokumentere rekrutteringsprocessen, hvis det er nødvendigt.</li>
+              <li>Modtage og vurdere din ansøgning,</li>
+              <li>Kontakte dig om rekrutteringsforløbet,</li>
+              <li>Afholde samtaler og vurdere din relevans til stillingen,</li>
+              <li>Dokumentere rekrutteringsprocessen, hvis det er nødvendigt.</li>
             </ul>
           </section>
 
@@ -112,9 +117,7 @@ export default function PrivatlivspolitikPage() {
               være med:
             </p>
             <ul>
-              <li>relevante ledere og medarbejdere involveret i rekrutteringen,</li>
-              <li>leverandører, der hoster eller driver ansøgningsløsningen,</li>
-              <li>offentlige myndigheder, hvis vi er forpligtet til det.</li>
+              <li>Relevante ledere og medarbejdere involveret i rekrutteringen,</li>
             </ul>
             <p>Vi sælger ikke dine personoplysninger til tredjeparter.</p>
           </section>
@@ -127,7 +130,7 @@ export default function PrivatlivspolitikPage() {
             </p>
             <p>
               Hvis du ikke får stillingen, sletter vi som udgangspunkt dine
-              oplysninger inden for <strong>[fx 6 måneder]</strong>, medmindre
+              oplysninger inden for <strong>30 dage</strong>, medmindre
               du har givet samtykke til, at vi må gemme dem længere til
               fremtidige jobmuligheder.
             </p>
@@ -137,13 +140,13 @@ export default function PrivatlivspolitikPage() {
             <h2>7. Dine rettigheder</h2>
             <p>Du har efter databeskyttelsesreglerne en række rettigheder:</p>
             <ul>
-              <li>ret til indsigt i de oplysninger, vi behandler om dig,</li>
-              <li>ret til at få urigtige oplysninger rettet,</li>
-              <li>ret til at få oplysninger slettet i visse tilfælde,</li>
-              <li>ret til at få behandlingen begrænset,</li>
-              <li>ret til at gøre indsigelse mod behandlingen,</li>
+              <li>Ret til indsigt i de oplysninger, vi behandler om dig,</li>
+              <li>Ret til at få urigtige oplysninger rettet,</li>
+              <li>Ret til at få oplysninger slettet i visse tilfælde,</li>
+              <li>Ret til at få behandlingen begrænset,</li>
+              <li>Ret til at gøre indsigelse mod behandlingen,</li>
               <li>
-                ret til at trække et samtykke tilbage, hvis behandlingen bygger
+                Ret til at trække et samtykke tilbage, hvis behandlingen bygger
                 på samtykke.
               </li>
             </ul>

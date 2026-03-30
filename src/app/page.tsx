@@ -52,7 +52,7 @@ export default function HomePage() {
           <article className={styles.card}>
             <h3>Om jobbet</h3>
             <p>
-              Som ungarbejder i Kvickly bliver du en del af butikkens hverdag og
+              Som medarbejder i Kvickly bliver du en del af butikkens hverdag og
               hjælper med alt fra kundeservice til opfyldning og orden.
             </p>
           </article>
@@ -73,7 +73,7 @@ export default function HomePage() {
               <li>Opfyldning af varer</li>
               <li>Hjælp til kunder i butikken</li>
               <li>Oprydning og lettere rengøring</li>
-              <li>Andre praktiske opgaver i hverdagen</li>
+              <li>Trimning af butikken</li>
             </ul>
           </article>
         </div>
