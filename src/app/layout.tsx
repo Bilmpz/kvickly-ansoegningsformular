@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kvickly - Ungarbejder ansøgning",
-  description: "Ansøgningsformular til ungarbejdere i Kvickly",
+  title: "Kvickly - Medarbejder ansøgning",
+  description: "Ansøgningsformular til  Kvickly",
 };
 
 export default function RootLayout({
