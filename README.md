@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kvickly ansøgningsformular
 
-## Getting Started
+En webbaseret ansøgningsløsning til **Kvickly Prøvestenscentret**, bygget i **Next.js** og **TypeScript**.  
+Projektet gør det muligt for unge ansøgere at læse om jobbet, se forventningerne og sende en ansøgning gennem en trinvis formular.
 
-First, run the development server:
+## Funktioner
+
+- Forside med introduktion til jobbet hos Kvickly
+- Side med ekstra information om butikken og ledelsen
+- Side med forventninger til ansøgere
+- Trin-for-trin ansøgningsformular
+- Server-side validering af ansøgning
+- Afsendelse af ansøgninger via e-mail med **Nodemailer**
+- Privatlivspolitik-side
+
+## Teknologier
+
+- **Next.js 16**
+- **React 19**
+- **TypeScript**
+- **Nodemailer**
+- CSS Modules + global CSS
+
+## Ruter
+
+Projektet indeholder blandt andet disse ruter:
+
+- `/` – Forside
+- `/laesmere` – Mere information om jobbet og varehuset
+- `/forventning` – Forventninger til ansøgere
+- `/ansoeg` – Ansøgningsformular
+- `/politik` – Privatlivspolitik
+- `/api/ansoeg` – API-endpoint til afsendelse af ansøgninger
+
+## Kom i gang
+
+### 1. Klon projektet
+
+```bash
+git clone https://github.com/Bilmpz/kvickly-ansoegningsformular.git
+cd kvickly-ansoegningsformular
+```
+
+### 2. Installer afhængigheder
+
+```bash
+npm install
+```
+
+### 3. Opret miljøvariabler
+
+Opret en `.env.local` fil i roden af projektet og tilføj:
+
+```env
+SMTP_HOST=
+SMTP_PORT=
+SMTP_SECURE=
+SMTP_USER=
+SMTP_PASS=
+SMTP_FROM=
+APPLICATION_RECEIVER=
+```
+
+### 4. Start udviklingsserveren
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Åbn derefter `http://localhost:3000` i din browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev    # Starter udviklingsserver
+npm run build  # Bygger projektet til produktion
+npm run start  # Starter produktionsbuild
+npm run lint   # Kører ESLint
+```
 
-## Learn More
+## Hvordan ansøgningen fungerer
 
-To learn more about Next.js, take a look at the following resources:
+1. Brugeren udfylder formularen ét spørgsmål ad gangen på `/ansoeg`
+2. Klienten validerer blandt andet, at felter ikke er tomme, og at e-mail ser gyldig ud
+3. Data sendes som `POST` til `/api/ansoeg`
+4. API'et validerer felterne igen
+5. Ansøgningen sendes videre som e-mail via SMTP/Nodemailer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Projektstruktur
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+src/
+  app/
+    ansoeg/
+    api/ansoeg/
+    forventning/
+    laesmere/
+    politik/
+  lib/
+    mailer.ts
+  types/
+    application.ts
+```
 
-## Deploy on Vercel
+## Bemærkninger
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Projektet bruger miljøvariabler til SMTP og modtageradresse, så mailopsætning skal være korrekt før formularen virker.
+- Privatlivspolitikken bør gennemgås og opdateres med endelige kontaktoplysninger, hvis projektet skal bruges i produktion.
+- Projektet er målrettet en konkret butik, **Kvickly Prøvestenscentret**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licens
+
+Der er ikke angivet en licens i projektet endnu. Tilføj gerne en `LICENSE`-fil, hvis projektet skal deles offentligt med klare brugsrettigheder.
