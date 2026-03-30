@@ -6,7 +6,7 @@
 .hero {
   position: relative;
   min-height: 68vh;
-  background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80");
+  background-image: url("https://www.tv2kosmopol.dk/img/asset/aW1hZ2VzLzIwMjAvMDkvMjEvMjAxNTExMDUtMTUyNzQyLTItMzNtYi0xLmpwZw/20151105-152742-2-33mb-1.jpg?fm=webp&crop=4207%2C2366%2C0%2C156&w=1536&s=fbc2152caaf213d3689dcd48e40af4ab");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -44,10 +44,10 @@
 
 .heroTitle {
   margin: 0 0 16px;
-  font-size: clamp(38px, 9vw, 68px);
+  font-size: clamp(38px, 6vw, 68px);
   line-height: 1.05;
   font-weight: 800;
-  max-width: 900px;
+  max-width: 700px;
 }
 
 .heroText {
@@ -198,41 +198,5 @@
 
   .introBox {
     padding: 30px 20px;
-  }
-
-  .footer {
-    margin-top: 3rem;
-    padding: 2rem 1.5rem;
-    background: rgba(255, 255, 255, 0.9);
-    color: #222;
-    text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(6px);
-  }
-
-  .footer p {
-    margin: 0.4rem 0;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .footer p:first-child {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #111;
-  }
-
-  @media (max-width: 600px) {
-    .footer {
-      padding: 1.5rem 1rem;
-    }
-
-    .footer p {
-      font-size: 0.95rem;
-    }
-
-    .footer p:first-child {
-      font-size: 1.05rem;
-    }
   }
 }

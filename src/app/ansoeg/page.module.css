@@ -1,0 +1,318 @@
+.wrapper {
+  min-height: 100vh;
+  background: #f6f4f1;
+}
+
+.topBar {
+  background: #ffffff;
+  border-bottom: 1px solid #e7e2db;
+}
+
+.topBarInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.backLink {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.topBarText {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 260px;
+  background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  min-height: 260px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.58) 0%,
+    rgba(0, 0, 0, 0.3) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 24px;
+  color: white;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+}
+
+.heroTitle {
+  margin: 0 0 12px;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.heroText {
+  margin: 0;
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.formSection {
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+  padding: 0 24px 60px;
+}
+
+.formGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.sideCard,
+.formCard {
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
+.sideCard {
+  padding: 28px 24px;
+  position: sticky;
+  top: 24px;
+}
+
+.sideLabel {
+  margin: 0 0 10px;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sideTitle {
+  margin: 0 0 12px;
+  font-size: 28px;
+  line-height: 1.15;
+  color: #2a2a2a;
+}
+
+.sideText {
+  margin: 0 0 22px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: #ece7df;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progressFill {
+  height: 100%;
+  background: #d71920;
+  transition: width 0.25s ease;
+}
+
+.sideList {
+  margin: 0;
+  padding-left: 18px;
+  color: #374151;
+  line-height: 1.9;
+}
+
+.formCard {
+  padding: 34px 30px;
+}
+
+.questionHeader {
+  margin-bottom: 18px;
+}
+
+.questionStep {
+  margin: 0 0 10px;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.question {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  color: #1f2937;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid #ddd6ce;
+  border-radius: 18px;
+  padding: 18px;
+  background: #fcfbfa;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  color: #111827;
+}
+
+.input {
+  min-height: 64px;
+  font-size: 18px;
+}
+
+.textarea {
+  min-height: 220px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #d71920;
+  box-shadow: 0 0 0 4px rgba(215, 25, 32, 0.08);
+  background: white;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9ca3af;
+}
+
+.errorMessage,
+.successMessage {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+.errorMessage {
+  color: #b42318;
+}
+
+.successMessage {
+  color: #166534;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 50px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primaryButton {
+  background: #d71920;
+  color: white;
+}
+
+.primaryButton:hover {
+  opacity: 0.96;
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.secondaryButton:hover {
+  background: #e5e7eb;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 920px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sideCard {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .topBarInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heroInner {
+    padding: 32px 20px;
+  }
+
+  .formSection {
+    padding: 0 16px 40px;
+  }
+
+  .formCard,
+  .sideCard {
+    padding: 22px 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}
