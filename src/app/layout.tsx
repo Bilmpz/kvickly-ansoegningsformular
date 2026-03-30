@@ -1,6 +1,3 @@
-import type { Metadata } from "next";
-import "./globals.css";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://kvickly-ansoegningsformular.vercel.app"),
   title: "Kvickly – Medarbejder ansøgning",
@@ -16,7 +13,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/kvickly-preview.png",
+        url: "https://kvickly-ansoegningsformular.vercel.app/kvickly-preview.png",
         width: 1200,
         height: 630,
         alt: "Kvickly medarbejder ansøgning",
@@ -28,18 +25,8 @@ export const metadata: Metadata = {
     title: "Kvickly – Medarbejder ansøgning",
     description:
       "Ansøg om job som medarbejder i Kvickly. Udfyld formularen trin for trin og fortæl os lidt om dig selv, din hverdag og hvornår du kan arbejde.",
-    images: ["/kvickly-preview.png"],
+    images: [
+      "https://kvickly-ansoegningsformular.vercel.app/kvickly-preview.png",
+    ],
   },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="da">
-      <body>{children}</body>
-    </html>
-  );
-}
