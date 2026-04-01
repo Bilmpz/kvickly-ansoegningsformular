@@ -90,6 +90,24 @@ export default function ForventningPage() {
               positivt til fællesskabet i butikken.
             </p>
           </article>
+          <article className={styles.card}>
+          <h3>Hvordan ser en typisk vagt ud?</h3>
+          <p>
+            Dine vagter afhænger af, hvilken afdeling du er i, og om du arbejder på en
+            hverdag eller i weekenden. På hverdage ligger vagterne typisk fra kl. 16 til
+            20, mens weekendarbejde kan variere mere i både antal timer og tidspunkt på
+            dagen.
+          </p>
+        </article>
+
+        <article className={styles.card}>
+          <h3>Hvor mange timer får unge typisk?</h3>
+          <p>
+            Timerne varierer afhængigt af skole, travlhed i butikken og hvor fleksibel du
+            er. Mange unge starter med en vagt om ugen og kan ofte få flere timer i
+            weekender.
+          </p>
+        </article>
           
         </div>
       </section>
