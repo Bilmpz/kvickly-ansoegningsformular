@@ -22,8 +22,8 @@ const questions: Field[] = [
   },
   {
     key: "age",
-    label: "Hvor gammel er du?",
-    placeholder: "Skriv din alder",
+    label: "Hvad er dit Fødselsdato",
+    placeholder: "Dato/Måned/Årstal",
     inputType: "number",
   },
   {
