@@ -168,7 +168,7 @@ export default function PrivatlivspolitikPage() {
               behandling af dine personoplysninger, kan du kontakte os på:
             </p>
             <div className={styles.infoBox}>
-              <p><strong>Kvickly Prøvestencenteret</strong></p>
+              <p><strong>KVICKLY PRØVESTENSCENTRET</strong></p>
               <p>E-mail: Kevin.handberg@kvickly.dk</p>
               <p>Telefon: 49 25 66 00</p>
             </div>
