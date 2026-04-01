@@ -62,7 +62,7 @@ export default function PrivatlivspolitikPage() {
               <p><strong>Kvickly Prøvestencenteret</strong></p>
               <p>CVR: 26259495</p>
               <p>Adresse: Birkedalsvej 5, 3000 Helsingør</p>
-              <p>E-mail: (Kevins mail)</p>
+              <p>E-mail: Kevin.handberg@kvickly.dk</p>
               <p>Telefon: 49 25 66 00</p>
             </div>
           </section>
@@ -169,7 +169,7 @@ export default function PrivatlivspolitikPage() {
             </p>
             <div className={styles.infoBox}>
               <p><strong>Kvickly Prøvestencenteret</strong></p>
-              <p>E-mail: (Kevins mail)</p>
+              <p>E-mail: Kevin.handberg@kvickly.dk</p>
               <p>Telefon: 49 25 66 00</p>
             </div>
           </section>

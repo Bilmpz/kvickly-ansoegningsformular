@@ -76,7 +76,7 @@ const questions: Field[] = [
   },
   {
     key: "extraInfo",
-    label: "Noget du selv ville tilføre?",
+    label: "Noget du selv ville tilføre? - Fx. et ønske om bestemt afdeling ",
     placeholder: "Skriv dit svar her",
     multiline: true,
   },

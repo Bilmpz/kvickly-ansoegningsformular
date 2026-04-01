@@ -42,7 +42,7 @@ export default function ForventningPage() {
           <article className={styles.card}>
             <h3>9. klasse og klar til job</h3>
             <p>
-              Du skal som udgangspunkt være færdig med 9. klasse og være klar
+              Du skal som udgangspunkt være færdig med 9. klasse og være 15 år, samt klar
               til at indgå i et rigtigt arbejdsmiljø med ansvar og faste
               opgaver.
             </p>
