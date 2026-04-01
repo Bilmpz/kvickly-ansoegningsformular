@@ -82,7 +82,7 @@ export default function PrivatlivspolitikPage() {
               <li>Oplysninger om dine personligetræk, som du oplyser os "Hvad du god til" & "Hvad du dårlig til" </li>
               <li>Tidlidere arbejdserfaring</li>
               <li>Tilgængelighed, fritidsaktiviteter og ønskede arbejdstider</li>
-              <li>Eventuelle information, som du deler i "Noget du selv ville tilføre" </li>
+              <li>Eventuelle andre informationer </li>
             </ul>
           </section>
 
