@@ -23,7 +23,7 @@ const questions: Field[] = [
   {
     key: "age",
     label: "Hvad er dit Fødselsdato",
-    placeholder: "Dato/Måned/Årstal",
+    placeholder: "Dato-Måned-Årstal",
     inputType: "number",
   },
   {
