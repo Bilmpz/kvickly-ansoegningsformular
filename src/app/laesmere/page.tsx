@@ -39,7 +39,98 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.leadersSection}>
+      <section className={styles.departmentsSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionKicker}>Afdelinger</p>
+          <h2 className={styles.sectionTitle}>
+            Hvad laver man i de forskellige afdelinger?
+          </h2>
+        </div>
+
+        <div className={styles.departmentList}>
+          <article className={styles.departmentCard}>
+            <div>
+              <p className={styles.departmentTag}>Butikken</p>
+              <h3>Nonfood</h3>
+              <p>
+                I nonfood arbejder man med varer uden for fødevarer, fx
+                husholdning, sæsonvarer og praktiske produkter til hjemmet.
+              </p>
+            </div>
+            <ul>
+              <li>Fylde varer op</li>
+              <li>Trimme og holde hylderne pæne</li>
+              <li>Hjælpe kunder med at finde varer</li>
+            </ul>
+          </article>
+
+          <article className={styles.departmentCard}>
+            <div>
+              <p className={styles.departmentTag}>Dagligvarer</p>
+              <h3>Tørvare / Food</h3>
+              <p>
+                Her arbejder man med butikkens klassiske dagligvarer og hjælper
+                med at holde afdelingen velopfyldt og overskuelig.
+              </p>
+            </div>
+            <ul>
+              <li>Vareopfyldning</li>
+              <li>Frontning og orden på hylderne</li>
+              <li>Hjælpe kunder i afdelingen</li>
+            </ul>
+          </article>
+
+          <article className={styles.departmentCard}>
+            <div>
+              <p className={styles.departmentTag}>Friske varer</p>
+              <h3>Frugt &amp; grønt</h3>
+              <p>
+                I frugt og grønt handler det om friskhed, kvalitet og at skabe
+                en flot afdeling, der ser indbydende ud hele dagen.
+              </p>
+            </div>
+            <ul>
+              <li>Fylde varer op løbende</li>
+              <li>Tjekke kvalitet og friskhed</li>
+              <li>Holde afdelingen pæn og overskuelig</li>
+            </ul>
+          </article>
+
+          <article className={styles.departmentCard}>
+            <div>
+              <p className={styles.departmentTag}>Service</p>
+              <h3>Kasselinjen</h3>
+              <p>
+                Ved kasselinjen er god service og overblik vigtigt, så kunderne
+                får en venlig og hurtig oplevelse.
+              </p>
+            </div>
+            <ul>
+              <li>Betjene kunderne ved kassen</li>
+              <li>Holde orden i kasseområdet</li>
+              <li>Yde god og imødekommende service</li>
+            </ul>
+          </article>
+
+          <article className={styles.departmentCard}>
+            <div>
+              <p className={styles.departmentTag}>Bageren</p>
+              <h3>Bagerafdelingen</h3>
+              <p>
+                I bageren hjælper man med at fylde op, holde afdelingen flot og
+                hjælpe kunder med spørgsmål og varer.
+              </p>
+            </div>
+            <ul>
+              <li>Fylde brød og kager op</li>
+              <li>Holde montre og hylder indbydende</li>
+              <li>Hjælpe kunder i afdelingen</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+        <section className={styles.leadersSection}>
         <div className={styles.sectionHeader}>
           <p className={styles.sectionKicker}>Mød ledelsen</p>
           <h2 className={styles.sectionTitle}>Varehusets ledere og chefer</h2>
@@ -148,97 +239,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={styles.departmentsSection}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionKicker}>Afdelinger</p>
-          <h2 className={styles.sectionTitle}>
-            Hvad laver man i de forskellige afdelinger?
-          </h2>
-        </div>
-
-        <div className={styles.departmentList}>
-          <article className={styles.departmentCard}>
-            <div>
-              <p className={styles.departmentTag}>Butikken</p>
-              <h3>Nonfood</h3>
-              <p>
-                I nonfood arbejder man med varer uden for fødevarer, fx
-                husholdning, sæsonvarer og praktiske produkter til hjemmet.
-              </p>
-            </div>
-            <ul>
-              <li>Fylde varer op</li>
-              <li>Trimme og holde hylderne pæne</li>
-              <li>Hjælpe kunder med at finde varer</li>
-            </ul>
-          </article>
-
-          <article className={styles.departmentCard}>
-            <div>
-              <p className={styles.departmentTag}>Dagligvarer</p>
-              <h3>Tørvare / Food</h3>
-              <p>
-                Her arbejder man med butikkens klassiske dagligvarer og hjælper
-                med at holde afdelingen velopfyldt og overskuelig.
-              </p>
-            </div>
-            <ul>
-              <li>Vareopfyldning</li>
-              <li>Frontning og orden på hylderne</li>
-              <li>Hjælpe kunder i afdelingen</li>
-            </ul>
-          </article>
-
-          <article className={styles.departmentCard}>
-            <div>
-              <p className={styles.departmentTag}>Friske varer</p>
-              <h3>Frugt &amp; grønt</h3>
-              <p>
-                I frugt og grønt handler det om friskhed, kvalitet og at skabe
-                en flot afdeling, der ser indbydende ud hele dagen.
-              </p>
-            </div>
-            <ul>
-              <li>Fylde varer op løbende</li>
-              <li>Tjekke kvalitet og friskhed</li>
-              <li>Holde afdelingen pæn og overskuelig</li>
-            </ul>
-          </article>
-
-          <article className={styles.departmentCard}>
-            <div>
-              <p className={styles.departmentTag}>Service</p>
-              <h3>Kasselinjen</h3>
-              <p>
-                Ved kasselinjen er god service og overblik vigtigt, så kunderne
-                får en venlig og hurtig oplevelse.
-              </p>
-            </div>
-            <ul>
-              <li>Betjene kunderne ved kassen</li>
-              <li>Holde orden i kasseområdet</li>
-              <li>Yde god og imødekommende service</li>
-            </ul>
-          </article>
-
-          <article className={styles.departmentCard}>
-            <div>
-              <p className={styles.departmentTag}>Bageren</p>
-              <h3>Bagerafdelingen</h3>
-              <p>
-                I bageren hjælper man med at fylde op, holde afdelingen flot og
-                hjælpe kunder med spørgsmål og varer.
-              </p>
-            </div>
-            <ul>
-              <li>Fylde brød og kager op</li>
-              <li>Holde montre og hylder indbydende</li>
-              <li>Hjælpe kunder i afdelingen</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
       <section className={styles.valuesSection}>
         <div className={styles.sectionHeader}>
           <p className={styles.sectionKicker}>Det forventer vi</p>
@@ -272,7 +272,11 @@ export default function HomePage() {
       </section>
 
       <footer className={styles.footer}>
+
         <p>Kvickly Prøvestencenteret</p>
+
+        <p>KVICKLY PRØVESTENSCENTRET</p>
+
         <p>Birkedalsvej 5, 3000 Helsingør</p>
         <p>Tlf: 49 25 66 00</p>
         <p>Åbningstider: Man–Søn 7:00–20:00</p>

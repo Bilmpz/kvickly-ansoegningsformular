@@ -22,8 +22,8 @@ const questions: Field[] = [
   },
   {
     key: "age",
-    label: "Hvor gammel er du?",
-    placeholder: "Skriv din alder",
+    label: "Hvad er dit Fødselsdato",
+    placeholder: "DatoMånedÅrstal",
     inputType: "number",
   },
   {
@@ -76,7 +76,11 @@ const questions: Field[] = [
   },
   {
     key: "extraInfo",
+
     label: "Noget du selv ville tilføje? Fx. et ønske om en bestemt afdeling",
+
+    label: "Andet, du vil tilføje? Fx. et ønske om en bestemt afdeling.",
+
     placeholder: "Skriv dit svar her",
     multiline: true,
   },
@@ -103,6 +107,7 @@ export default function ApplicationPage() {
   const [isError, setIsError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasAcceptedPrivacy, setHasAcceptedPrivacy] = useState(false);
 
   const currentQuestion = useMemo(() => questions[step], [step]);
   const currentValue = formData[currentQuestion.key];
@@ -154,10 +159,17 @@ export default function ApplicationPage() {
     setMessage("");
     setIsError(false);
     setIsSubmitted(false);
+    setHasAcceptedPrivacy(false);
   }
 
   async function handleSubmit() {
     if (!validateCurrentField()) return;
+
+    if (!hasAcceptedPrivacy) {
+      setIsError(true);
+      setMessage("Du skal godkende privatlivspolitikken, før du kan sende ansøgningen.");
+      return;
+    }
 
     try {
       setIsSubmitting(true);
@@ -169,7 +181,10 @@ export default function ApplicationPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          hasAcceptedPrivacy,
+        }),
       });
 
       const result = await response.json();
@@ -185,6 +200,7 @@ export default function ApplicationPage() {
       setMessage("");
       setIsError(false);
       setIsSubmitted(true);
+      setHasAcceptedPrivacy(false);
     } catch {
       setIsError(true);
       setMessage("Der opstod en fejl ved afsendelse.");
@@ -195,24 +211,22 @@ export default function ApplicationPage() {
 
   return (
     <main className={styles.wrapper}>
-      <section className={styles.topBar}>
-        <div className={styles.topBarInner}>
-          <Link href="/" className={styles.backLink}>
-            ← Tilbage til forsiden
-          </Link>
-          <p className={styles.topBarText}>Medarbejder ansøgning</p>
-        </div>
-      </section>
-
       <section className={styles.hero}>
-        <div className={styles.heroOverlay}>
-          <div className={styles.heroInner}>
-            <p className={styles.kicker}>Kvickly Prøvestencenteret</p>
-            <h1 className={styles.heroTitle}>Ansøg om at blive medarbejder</h1>
-            <p className={styles.heroText}>
-              Udfyld formularen trin for trin. Det tager kun få minutter.
-            </p>
+        <div className={styles.topBar}>
+          <div className={styles.topBarInner}>
+            <Link href="/" className={styles.backLink}>
+              ← Tilbage til forsiden
+            </Link>
+            <p className={styles.topBarText}>Medarbejder ansøgning</p>
           </div>
+        </div>
+
+        <div className={styles.heroInner}>
+          <p className={styles.kicker}>KVICKLY PRØVESTENSCENTRET</p>
+          <h1 className={styles.heroTitle}>Ansøg om at blive medarbejder</h1>
+          <p className={styles.heroText}>
+            Udfyld formularen trin for trin. Det tager kun få minutter.
+          </p>
         </div>
       </section>
 
@@ -267,6 +281,16 @@ export default function ApplicationPage() {
                   Vi har modtaget din ansøgning. Hvis din profil matcher det, vi
                   søger, hører du fra os.
                 </p>
+
+                <div className={styles.successActions}>
+                  <button
+                    type="button"
+                    className={styles.primaryButton}
+                    onClick={handleNewApplication}
+                  >
+                    Udfyld en ny ansøgning
+                  </button>
+                </div>
               </div>
             ) : (
               <>
@@ -339,9 +363,21 @@ export default function ApplicationPage() {
                 </div>
 
                 <div className={styles.privacyRow}>
-                  <Link href="/politik" className={styles.privacyLink}>
-                    Privatlivspolitik
-                  </Link>
+                  <label className={styles.privacyConsent}>
+                    <input
+                      type="checkbox"
+                      className={styles.privacyCheckbox}
+                      checked={hasAcceptedPrivacy}
+                      onChange={(e) => setHasAcceptedPrivacy(e.target.checked)}
+                    />
+                    <span className={styles.customCheckbox} />
+                    <span className={styles.privacyText}>
+                      Jeg accepterer{" "}
+                      <Link href="/politik" className={styles.privacyLink}>
+                        Privatlivspolitik
+                      </Link>
+                    </span>
+                  </label>
                 </div>
               </>
             )}

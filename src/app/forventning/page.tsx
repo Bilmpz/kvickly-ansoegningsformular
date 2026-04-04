@@ -42,7 +42,7 @@ export default function ForventningPage() {
           <article className={styles.card}>
             <h3>9. klasse og klar til job</h3>
             <p>
-              Du skal som udgangspunkt være færdig med 9. klasse og være klar
+              Du skal som udgangspunkt være færdig med 9. klasse og være 15 år, samt klar
               til at indgå i et rigtigt arbejdsmiljø med ansvar og faste
               opgaver.
             </p>
@@ -90,6 +90,25 @@ export default function ForventningPage() {
               positivt til fællesskabet i butikken.
             </p>
           </article>
+          <article className={styles.card}>
+          <h3>Hvordan ser en typisk vagt ud?</h3>
+          <p>
+            Dine vagter afhænger af, hvilken afdeling du er i, og om du arbejder på en
+            hverdag eller i weekenden. På hverdage ligger vagterne typisk fra kl. 16 til
+            20, mens weekendarbejde kan variere mere i både antal timer og tidspunkt på
+            dagen.
+          </p>
+        </article>
+
+        <article className={styles.card}>
+          <h3>Hvor mange timer får unge typisk?</h3>
+          <p>
+            Timerne varierer afhængigt af skole, travlhed i butikken og hvor fleksibel du
+            er. Mange unge starter med en vagt om ugen og kan ofte få flere timer i
+            weekender.
+          </p>
+        </article>
+          
         </div>
       </section>
 
@@ -114,7 +133,11 @@ export default function ForventningPage() {
       </section>
 
       <footer className={styles.footer}>
+
         <p>Kvickly Prøvestencenteret</p>
+
+        <p>KVICKLY PRØVESTENSCENTRET</p>
+
         <p>Birkedalsvej 5, 3000 Helsingør</p>
         <p>Tlf: 49 25 66 00</p>
         <p>Åbningstider: Man–Søn 7:00–20:00</p>
