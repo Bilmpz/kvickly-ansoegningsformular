@@ -1,22 +1,27 @@
 .wrapper {
   min-height: 100vh;
   background: #f6f4f1;
-  position: relative;
+}
+
+.hero {
+  min-height: 260px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .topBar {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 20;
-  background: rgba(0, 0, 0, 0.45);
+  background: transparent;
 }
 
 .topBarInner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 26.8px 24px;
+  padding: 26px 24px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,26 +39,11 @@
   font-size: 14px;
 }
 
-.hero {
-  min-height: 260px;
-  padding-top: 72px;
-  background-image: url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-}
-
-.heroOverlay {
-  min-height: 260px;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-}
-
 .heroInner {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding: 40px 24px;
+  padding: 40px 24px 40px;
   color: white;
 }
 
@@ -210,6 +200,7 @@
   min-height: 220px;
   font-size: 17px;
   line-height: 1.7;
+  resize: vertical;
 }
 
 .input:focus,
@@ -329,12 +320,67 @@
 }
 
 .privacyRow {
-  margin-top: 14px;
+  margin-top: 18px;
+}
+
+.privacyConsent {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  flex-wrap: wrap;
+}
+
+.privacyCheckbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.customCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.privacyCheckbox:checked + .customCheckbox {
+  background: #d71920;
+  border-color: #d71920;
+}
+
+.privacyCheckbox:checked + .customCheckbox::after {
+  content: "";
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -1px;
+}
+
+.privacyCheckbox:focus-visible + .customCheckbox {
+  box-shadow: 0 0 0 4px rgba(215, 25, 32, 0.12);
+}
+
+.privacyText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
 }
 
 .privacyLink {
-  font-size: 14px;
-  font-weight: 600;
   color: #6b7280;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -382,5 +428,9 @@
   .secondaryButton,
   .secondaryLinkButton {
     width: 100%;
+  }
+
+  .privacyConsent {
+    align-items: flex-start;
   }
 }

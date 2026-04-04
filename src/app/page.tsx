@@ -8,11 +8,9 @@ export default function HomePage() {
         <div className={styles.heroOverlay}>
           <div className={styles.heroContent}>
             <p className={styles.kicker}>Kvickly Prøvestencenteret</p>
-            <h1 className={styles.heroTitle}>BLIV MEDARBEJDER HOS OS</h1>
+            <h1 className={styles.heroTitle}>BLIV MEDARBJEDER HOS OS</h1>
             <p className={styles.heroText}>
-              Hos Kvickly Prøvestencenteret leder vi efter unge medarbejdere, der har lyst til at
-              tage ansvar, hjælpe kunderne og blive en del af et stærkt hold i
-              butikken.
+              Hos Kvickly Prøvestenscentret leder vi efter unge medarbejdere, der har lyst til at få et fritidsjob, med ansvar
             </p>
             <div className={styles.heroActions}>
               <Link href="/ansoeg" className={styles.primaryButton}>
@@ -28,10 +26,10 @@ export default function HomePage() {
 
       <section id="info" className={styles.introSection}>
         <div className={styles.introBox}>
-          <h2 className={styles.introTitle}>Find din plads hos Kvickly</h2>
+          <h2 className={styles.introTitle}>Find dit næste job hos Kvickly</h2>
           <p className={styles.introText}>
             Vi søger unge, der har lyst til at lære, tage ansvar og være en del
-            af hverdagen i butikken. Du kommer til at arbejde med service,
+            af hverdagen i butikken. Uanset om du har erfaring eller ej. Du kommer til at arbejde med service,
             samarbejde og opgaver, der gør en forskel for både kunder og
             kollegaer.
           </p>
@@ -68,18 +66,18 @@ export default function HomePage() {
           </article>
 
           <article className={styles.card}>
-            <h3>Arbejdsopgaver</h3>
+            <h3>Hvordan ser en typisk vagt ud?</h3>
             <ul>
-              <li>Opfyldning af varer</li>
-              <li>Hjælp til kunder i butikken</li>
-              <li>Oprydning og lettere rengøring</li>
-              <li>Trimning af butikken</li>
+              <li>Vagterne afhænger af afdeling og om det er hverdag eller weekend</li>
+              <li>Mange unge starter med én vagt om ugen</li>
+              <li>Hverdagsvagter ligger typisk kl. 16–20</li>
+              <li>I weekender kan man ofte få flere timer, og vagterne varierer mere</li>
             </ul>
           </article>
         </div>
       </section>
     <footer className={styles.footer}>
-      <p>Kvickly Prøvestencenteret</p>
+      <p>Kvickly Prøvestenscentret</p>
       <p>Birkedalsvej 5, 3000 Helsingør</p>
       <p>Tlf: 49 25 66 00</p>
       <p>Åbningstider: Man–Søn 7:00–20:00</p>
