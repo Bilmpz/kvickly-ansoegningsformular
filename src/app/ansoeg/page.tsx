@@ -64,7 +64,7 @@ const questions: Field[] = [
   },
   {
     key: "dailyLife",
-    label: "Hvad laver du til daglig? (Skole, sport....)",
+    label: "Hvad laver du til daglig? (Skole, sport...)",
     placeholder: "Fortæl lidt om din hverdag",
     multiline: true,
   },
@@ -76,7 +76,7 @@ const questions: Field[] = [
   },
   {
     key: "extraInfo",
-    label: "Noget du selv ville tilføre?",
+    label: "Noget du selv ville tilføje? Fx. et ønske om en bestemt afdeling",
     placeholder: "Skriv dit svar her",
     multiline: true,
   },
