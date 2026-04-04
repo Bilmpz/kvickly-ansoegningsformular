@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className={styles.heroOverlay}>
           <div className={styles.heroContent}>
             <p className={styles.kicker}>Kvickly Prøvestencenteret</p>
-            <h1 className={styles.heroTitle}>BLIV MEDARBJEDER HOS OS</h1>
+            <h1 className={styles.heroTitle}>BLIV MEDARBEJDER HOS OS</h1>
             <p className={styles.heroText}>
               Hos Kvickly Prøvestencenteret leder vi efter unge medarbejdere, der har lyst til at
               tage ansvar, hjælpe kunderne og blive en del af et stærkt hold i
@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
       </section>
     <footer className={styles.footer}>
-      <p>Kvickly Prøvestenscentret</p>
+      <p>Kvickly Prøvestencenteret</p>
       <p>Birkedalsvej 5, 3000 Helsingør</p>
       <p>Tlf: 49 25 66 00</p>
       <p>Åbningstider: Man–Søn 7:00–20:00</p>

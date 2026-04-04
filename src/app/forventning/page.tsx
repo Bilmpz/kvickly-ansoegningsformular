@@ -114,7 +114,7 @@ export default function ForventningPage() {
       </section>
 
       <footer className={styles.footer}>
-        <p>Kvickly Prøvestenscentret</p>
+        <p>Kvickly Prøvestencenteret</p>
         <p>Birkedalsvej 5, 3000 Helsingør</p>
         <p>Tlf: 49 25 66 00</p>
         <p>Åbningstider: Man–Søn 7:00–20:00</p>
