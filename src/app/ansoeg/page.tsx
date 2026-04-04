@@ -76,7 +76,11 @@ const questions: Field[] = [
   },
   {
     key: "extraInfo",
+<<<<<<<<< Temporary merge branch 1
+    label: "Andet, du vil tilføje? Fx. et ønske om en bestemt afdeling.",
+=========
     label: "Noget du selv ville tilføje? Fx. et ønske om en bestemt afdeling",
+>>>>>>>>> Temporary merge branch 2
     placeholder: "Skriv dit svar her",
     multiline: true,
   },
