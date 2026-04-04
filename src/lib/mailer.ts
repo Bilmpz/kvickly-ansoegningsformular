@@ -38,7 +38,7 @@ export async function sendApplicationEmail(data: ApplicationData) {
     secure: SMTP_SECURE === "true",
     auth: {
       user: SMTP_USER,
-      pass: SMTP_PASS,
+      pass: SMTP_PASS.replace(/\s/g, ""),
     },
   });
 
@@ -123,6 +123,7 @@ ${data.extraInfo}
   await transporter.sendMail({
     from: `"Kvickly ansøgning" <${SMTP_FROM}>`,
     to: APPLICATION_RECEIVER,
+    replyTo: data.email,
     subject: `Ny ungarbejder-ansøgning - ${data.fullName}`,
     text,
     html,

@@ -16,7 +16,7 @@ export default function HomePage() {
         <div className={styles.heroOverlay}>
           <div className={styles.heroContent}>
             <p className={styles.kicker}>Læs mere om</p>
-            <h1 className={styles.heroTitle}>Kvickly Prøvestenscentret</h1>
+            <h1 className={styles.heroTitle}>Kvickly Prøvestencenteret</h1>
             <p className={styles.heroText}>
               Hos Kvickly leder vi efter unge medarbejdere, der har lyst til at
               tage ansvar, hjælpe kunderne og blive en del af et stærkt hold i
